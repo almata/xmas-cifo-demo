@@ -8,7 +8,7 @@ const App = () => {
   const [gifts, setGifts] = useState([])
 
   useEffect(() => {
-    setGifts(JSON.parse(localStorage.getItem(GIFTS)))
+    setGifts(JSON.parse(localStorage.getItem(GIFTS)) || [])
   }, [])
 
   const addGift = (gift) => {
